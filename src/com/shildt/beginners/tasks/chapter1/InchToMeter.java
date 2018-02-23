@@ -12,8 +12,25 @@ public class InchToMeter {
         for (inch = 1; inch <= 144; inch++) {
             meter = inch / INCHES_IN_ONE_METER;
 
-            System.out.println(inch + " дюйм равен " + meter + " метрам");
-            counter++;
+            if (inch >= 5 && inch <= 20) {
+                System.out.println(inch + " дюймов равны " + meter + " метрам");
+                counter++;
+            }
+
+            else if (inch % 10 >= 2 && inch % 10 <= 4) {
+                System.out.println(inch + " дюйма равны " + meter + " метрам");
+                counter++;
+            }
+
+            else if (inch % 10 >= 5 && inch % 10 <= 9 || inch % 10 == 0) {
+                System.out.println(inch + " дюймов равны " + meter + " метрам");
+                counter++;
+            }
+
+            else if (inch % 10 == 1) {
+                System.out.println(inch + " дюйм равен " + meter + " метрам");
+                counter++;
+            }
 
             if (counter == 12) {
                 System.out.println();
